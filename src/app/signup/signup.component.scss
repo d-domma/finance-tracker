@@ -1,0 +1,150 @@
+/* Color Scheme Variables */
+$primary-color: #5a1b8b;  // Dark Purple
+$secondary-color: #e74c3c;  // Dark Pink
+$accent-color: #03375a;  // Dark Blue
+$background-color: #000000;  // Full black background
+$text-color: #f4f4f4;  // Light text for contrast
+$border-color: #444;  // Dark border color
+$button-hover-color: #9b59b6;  // Light Purple on hover
+$error-color: #b40892;  // Red for error messages
+$success-color: #27ae60;  // Green for success messages
+
+/* Auth Container */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  background-color: $background-color;
+  padding: 0 20px;
+}
+
+/* Auth Form Styling */
+.auth-form {
+  background-color: $background-color;
+  padding: 3rem;  // Increased padding for a larger box
+  width: 700px;  // Squashed width
+  text-align: left;
+  font-family: 'Arial', sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.2);  // More intense shadow for depth
+
+  h2 {
+    margin-bottom: 20px;  // Increased margin for more spacing
+    font-size: 2.5rem;  // Bigger title font size
+    color: $primary-color;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: $text-color;
+    font-size: 1.1rem;  // Slightly bigger text for labels
+  }
+
+  input {
+    width: 100%;
+    padding: 1rem;  // Increased padding for inputs
+    margin-bottom: 1.5rem;
+    border: 1px solid $border-color;
+    border-radius: 8px;  // Slightly more rounded inputs
+    background: $background-color;
+    color: $text-color;
+    font-size: 1.2rem;  // Larger font size for better readability
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+
+  .password-requirements {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 10px 0;  // Reduced bottom margin to bring it up
+    font-size: 12px;
+    color: $error-color;
+  }
+  
+  .password-requirements li {
+    margin-bottom: 2px;
+  }
+
+  /* Button Styling */
+  .primary-btn, .secondary-btn {
+    width: 100%;
+    padding: 1.2rem;  // Increased padding for larger buttons
+    border-radius: 12px;  // Fully rounded corners for a modern look
+    font-size: 1.3rem;  // Bigger font size for better readability
+    font-weight: 600;  // Bold text
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  // Soft shadow for depth
+
+    &:hover {
+      transform: translateY(-3px);  // Slight upward movement on hover
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);  // Darker shadow on hover for emphasis
+    }
+
+    &:active {
+      transform: translateY(0);  // Reset position when clicked
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  // Lighter shadow when clicked
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.4);  // Focus effect with primary color
+    }
+  }
+
+  /* Primary Button */
+  .primary-btn {
+    background: $primary-color;
+    color: white;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+
+  /* Secondary Button */
+  .secondary-btn {
+    background: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+
+    &:hover {
+      background: $primary-color;
+      color: white;
+    }
+  }
+
+  /* Error and Success Messages */
+  .error-message {
+    color: $error-color;
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .success-message {
+    color: $success-color;
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* Focus effect */
+  .primary-btn:focus, .secondary-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.5);
+  }
+}

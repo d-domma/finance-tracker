@@ -1,0 +1,13 @@
+{
+  "/api/chart": {
+    "target": "https://query1.finance.yahoo.com",
+    "secure": true,
+    "changeOrigin": true,
+    "headers": {
+      "User-Agent": "Mozilla/5.0"
+    },
+    "pathRewrite": {
+      "^/api/chart": "/v8/finance/chart"
+    }
+  }
+}

@@ -1,0 +1,181 @@
+/* Color Scheme Variables */
+$primary-color: #5a1b8b;  // Dark Purple
+$secondary-color: #00bcd4;  // Dark Pink
+$accent-color: #03375a;  // Dark Blue for accents
+$background-light: #2d3e56;  // Darker Grayish Blue for background
+$background-dark: #1c2530;  // Deep Dark Blue
+$text-primary: #f0f4f8;  // Light text color for contrast
+$text-secondary: #e3e6e8;  // Muted Gray for secondary text
+
+// Bright Colors for Headers
+$header-primary: #00bcd4;  // Bright Coral for primary headers
+$header-secondary: #00bcd4;  // Bright Yellow for secondary headers
+$header-accent: #00bcd4;  // Bright Cyan for accent headers
+
+// Typography
+$font-family-heading: 'Playfair Display', serif; // Elegant and Firm Font for headings
+$font-family-body: 'Open Sans', sans-serif; // Clean Sans-Serif Font for body text
+
+// General Styles
+.homepage-container {
+  font-family: $font-family-body;
+  line-height: 1.8;
+  color: $text-primary;
+}
+
+// Section Base Styles
+section {
+  padding: 70px 20px;
+  text-align: center;
+
+  h2 {
+    font-family: $font-family-heading;
+    font-size: 2rem;  // Smaller font size for headers
+    color: $header-primary;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $text-secondary;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: white;
+    background-color: $secondary-color;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      background-color: darken($secondary-color, 15%);
+      transform: translateY(1px);
+    }
+  }
+}
+
+// Hero Section with Centered Text
+.hero-section {
+  background: linear-gradient(135deg, $primary-color, $accent-color);
+  color: white;
+  padding: 100px 20px;
+
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+
+    .title {
+      font-family: $font-family-heading;
+      font-size: 2.5rem;  // Adjusted to make it smaller
+      font-weight: 700;
+      color: $header-accent;
+      text-align: center;  // Centering the text
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      color: $text-primary;
+    }
+
+    .cta-button {
+      background-color: $accent-color;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: darken($accent-color, 10%);
+      }
+    }
+  }
+}
+
+// Finance Management Section
+.finance-management-section {
+  background-color: $background-light;
+  text-align: center;
+
+
+  .text-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  .section-button {
+    background-color: $primary-color;
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Chatbot Section
+.chatbot-section {
+  background-color: $background-dark;
+  text-align: center;
+
+
+  .content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .section-button {
+    background-color: $accent-color;
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
+  }
+}
+
+// Tiny Friend Section
+.tiny-friend-section {
+  background-color: $background-light;
+  text-align: center;
+
+
+  .text-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Trends Section
+.trends-section {
+  background-color: $background-dark;
+  text-align: center;
+
+  ul {
+    max-width: 600px;
+    margin: 0 auto;
+
+    li {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: $text-secondary;
+    }
+  }
+}

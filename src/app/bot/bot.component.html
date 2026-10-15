@@ -1,0 +1,107 @@
+<div class="forum-container">
+  <!-- 
+  <div class="sidebar">
+    <div class="faq-header" (click)="toggleFAQ()">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <ul id="faqList" class="faq-list">
+      <li (click)="goToFAQPage('/faq/post-creation')">How to create a post?</li>
+      <li (click)="goToFAQPage('/faq/delete-comment')">How to delete a comment?</li>
+      <li (click)="goToFAQPage('/faq/forum-rules')">What are the forum rules?</li>
+    </ul>
+  </div>
+
+
+  <div class="main-content">
+
+    <div class="top-section">
+      <input type="text" class="search-bar" placeholder="Search...">
+      <div class="profile-section">
+        <img src="assets/profile.jpg" alt="Profile Image" class="profile-pic">
+        <div class="profile-info">
+          <h3>John Doe</h3>
+          <p>Passionate Developer & Tech Enthusiast</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-section" id="chatSection">
+      <div class="message-card" style="background-color: #1e3a5f;">
+        <div class="message-header">
+          <img src="assets/user1.jpg" alt="User Image" class="user-pic">
+          <h4>Alice</h4>
+        </div>
+        <p>Hey everyone! Excited to be here.</p>
+      </div>
+      <div class="message-card" style="background-color: #2a5d4c;">
+        <div class="message-header">
+          <img src="assets/user2.jpg" alt="User Image" class="user-pic">
+          <h4>Bob</h4>
+        </div>
+        <p>This is such a cool platform.</p>
+      </div>
+      <div class="message-card" style="background-color: #4c2a5d;">
+        <div class="message-header">
+          <img src="assets/user3.jpg" alt="User Image" class="user-pic">
+          <h4>Charlie</h4>
+        </div>
+        <p>Anyone know how to add a new topic?</p>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="userMessage" placeholder="Type a message..." (keyup.enter)="sendMessage()">
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+-->
+<div class="bot-container">
+  <div class="forum-container">
+    <!-- Left Sidebar (FAQ Section) -->
+    <div class="sidebar">
+      <div class="faq-header" (click)="toggleFAQ()">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <ul id="faqList" class="faq-list">
+        <li (click)="goToFAQPage('/faq/post-creation')">How to create a post?</li>
+        <li (click)="goToFAQPage('/faq/delete-comment')">How to delete a comment?</li>
+        <li (click)="goToFAQPage('/faq/forum-rules')">What are the forum rules?</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Top Section (Search + Profile) -->
+      <div class="top-section">
+        <input type="text" class="search-bar" placeholder="Search...">
+        <div class="profile-section">
+          <img src="assets/john.jpg" alt="Profile Image" class="profile-pic">
+          <div class="profile-info">
+            <h3>John Doe</h3>
+            <p>Passionate Developer & Tech Enthusiast</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Section -->
+      <div class="chat-container">
+        <div class="chat-section" id="chatSection">
+          <div *ngFor="let message of messages" class="message-card" [ngStyle]="{'background-color': message.bgColor}">
+            <div class="message-header">
+              <img [src]="message.profilePic" alt="{{ message.username }}'s Profile Picture" class="user-pic">
+              <h4>{{ message.username }}</h4>
+            </div>
+            <p>{{ message.text }}</p>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+  <!-- User Input (Placed Below Everything) -->
+  <div class="chat-input">
+    <input type="text" id="userMessage" placeholder="Type a message..." (keyup.enter)="sendMessage()">
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>

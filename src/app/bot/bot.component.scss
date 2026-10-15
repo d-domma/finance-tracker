@@ -1,0 +1,332 @@
+/* 
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; 
+  font-family: Arial, sans-serif;
+}
+
+.forum-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.sidebar {
+  width: 300px;
+  background-color: #3a0d5e; 
+  color: white;
+  padding: 20px;
+  height: 100vh;
+}
+
+.faq-header {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+      cursor: pointer;
+      padding: 10px;
+      transition: background 0.2s ease;
+
+      &:hover {
+          background: #5a1b8b;
+      }
+  }
+}
+
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: black; 
+}
+
+
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  margin-right: 15px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-info {
+  color: white;
+}
+
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+
+
+.chat-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-bottom: 70px; 
+}
+
+.message-card {
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.user-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+
+.chat-input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 10px;
+  background: black;
+  border-top: 1px solid #444;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 10px;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  background: #5a1b8b;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+      background: #7a2bb8;
+  }
+}
+*/
+/* Ensure full-page black background */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black !important;
+  font-family: Arial, sans-serif;
+}
+
+/* Wrap everything in a single container */
+.bot-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+/* Forum Layout */
+.forum-container {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Sidebar (FAQ Section) */
+.sidebar {
+  width: 300px;
+  background-color: #121212; /* Dark purple */
+  color: white;
+  padding: 20px;
+  height: 90vh;
+}
+
+.faq-header {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+      cursor: pointer;
+      padding: 10px;
+      transition: background 0.2s ease;
+
+      &:hover {
+          background: #5a1b8b;
+      }
+  }
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: black; /* Ensures all sections remain black */
+}
+
+/* Top Section (Search Bar + Profile) */
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  margin-right: 15px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-info {
+  color: white;
+}
+
+/* Chat Section */
+.chat-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat Section (Scrollable) */
+.chat-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Messages scroll up */
+  max-height: calc(100vh - 120px); /* Ensures chat doesn't go over input */
+  padding-bottom: 30px;
+}
+
+/* Message Styling */
+.message-card {
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adds space between profile picture and username */
+  margin-bottom: 5px;
+}
+
+.user-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Chat Input (Fixed Below Everything) */
+.chat-input {
+  width: 97.2%;
+  padding: 10px;
+  background: black;
+  border-top: 1px solid #444;
+  display: flex;
+  position: absolute; /* Change from relative */
+  bottom: -180px; /* Move input up */
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 10px;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  background: #5a1b8b;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+      background: #7a2bb8;
+  }
+}

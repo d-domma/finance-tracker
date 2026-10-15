@@ -1,0 +1,49 @@
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="/assets/logo1.png" alt="Finance Tracker Logo" class="logo-img">
+    </div>
+
+    <!-- Links visible when neither Kids Mode nor Parent Mode is active -->
+    <nav *ngIf="!isKidsMode && !isParentMode">
+      <a routerLink="/home">Home</a>
+      <a routerLink="/organizer">Organizer</a>
+      <a routerLink="/track">Track</a>
+      <a routerLink="/bot">Help</a>
+      <a routerLink="/trends">Trends</a>
+      <a routerLink="/kids" (click)="setKidsMode()">Kids Mode</a>
+    </nav>
+
+    <!-- Link to go to Parent Mode when in Kids Mode -->
+    <nav *ngIf="isKidsMode">
+      <a routerLink="/parent" (click)="setParentMode()">Parent Mode</a>
+    </nav>
+
+    <!-- Links visible when in Parent Mode -->
+    <nav *ngIf="isParentMode">
+      <!-- Display all links, including Home and Kids Mode -->
+      <a routerLink="/home">Home</a>
+      <a routerLink="/organizer" (click)="resetToDefault()">Organizer</a>
+      <a routerLink="/track">Track</a>
+      <a routerLink="/bot">Help</a>
+      <a routerLink="/trends">Trends</a>
+      <a routerLink="/kids" (click)="setKidsMode()">Kids Mode</a>
+    </nav>
+
+    <div class="auth-buttons">
+      <a routerLink="/login">Login</a>
+      <a routerLink="/signup">Sign up</a>
+      <button *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2025 Finance Tracker. All rights reserved.</p>
+  </div>
+</footer>
