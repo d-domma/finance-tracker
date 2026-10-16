@@ -1,27 +1,42 @@
-# ApStudyWebsite
+# Finance Tracker | AI-Powered Personal Finance App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+A personal finance management application that combines transaction tracking, an AI-powered assistant, and real-time stock market information in one platform.
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+I built Finance Tracker to make managing personal finances simpler and more accessible. Instead of switching between different tools to organize transactions, find financial information, and follow stock market trends, users can do everything from one interface.
 
-## Code scaffolding
+## Key Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**1. Transaction Management**
+- Add and organize financial transactions.
+- View transaction history and track financial activity.
+- Search through past transactions to find specific records.
 
-## Build
+**2. AI Financial Assistant**
+- Integrated an AI-powered chatbot to answer finance-related questions.
+- Provides a conversational interface for accessing financial information.
+- Makes exploring financial concepts more intuitive.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**3. Stock Market Trends**
+- Displays stock market information sourced from Yahoo Finance.
+- Allows users to explore current stock trends.
+- Brings market information directly into the finance dashboard.
 
-## Running unit tests
+**4. User Interface**
+- Designed an organized dashboard for navigating financial features.
+- Integrated transaction management, AI assistance, and stock information into one application.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Project Motivation
 
-## Running end-to-end tests
+I wanted to build a finance application that went beyond storing transactions. My goal was to combine financial organization with tools that help users understand their finances and explore market information without constantly switching between platforms.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Engineering Focus
 
-## Further help
+This project gave me experience integrating multiple software components into a single application, including transaction management, AI-powered interactions, and external financial data.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+It also strengthened my understanding of how different application features communicate and work together to create a cohesive user experience.
+
+## Project Purpose
+
+Developed as a personal software engineering project to explore financial technology, AI integration, and full-stack application development.
